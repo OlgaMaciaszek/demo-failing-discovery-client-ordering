@@ -26,6 +26,9 @@ public class DemoApplication {
 class DemoConfiguration {
 
 
+	// This will cause startup to fail with: org.springframework.beans.factory.NoSuchBeanDefinitionException:
+	// No qualifying bean of type 'org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean' available:
+	// expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 	@Bean
 	EurekaInstanceConfig eurekaInstanceConfig() {
 		return new EurekaInstanceConfigWithNoOrder();
